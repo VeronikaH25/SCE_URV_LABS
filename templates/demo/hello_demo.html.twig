@@ -1,0 +1,15 @@
+<h1>Llistat de Cotxes</h1>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Nombre del Coche</th>
+    </tr>
+    {# Iteramos sobre el array 'cars' que nos pasó el controlador #}
+    {% for car in cars %}
+        <tr>
+            <td>{{ car.id }}</td>
+            <td>{{ car.name }}</td>
+        </tr>
+    {% endfor %}
+</table>
