@@ -18,7 +18,9 @@
 /assets/vendor/
 ###< symfony/asset-mapper ###
 
-# Ignorar archivos de entorno específicos que subimos por error
+# Bloqueo total de archivos de entorno (añadido manualmente)
 .env
 .env.dev
 .env.test
+.env.local
+.env.*

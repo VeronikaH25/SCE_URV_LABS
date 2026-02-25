@@ -1,15 +1,12 @@
-<h1>Llistat de Cotxes</h1>
+{% extends 'base.html.twig' %}
 
-<table border="1">
-    <tr>
-        <th>ID</th>
-        <th>Nombre del Coche</th>
-    </tr>
-    {# Iteramos sobre el array 'cars' que nos pasó el controlador #}
+{% block body %}
+    <h1>Llistat de cotxes</h1>
+
     {% for car in cars %}
-        <tr>
-            <td>{{ car.id }}</td>
-            <td>{{ car.name }}</td>
-        </tr>
+        {# Metemos todo dentro del atributo class #}
+        <p class="car-name {% if car.name == 'Toyota' %}important car-special{% endif %}">
+            {{ car.name }}
+        </p>
     {% endfor %}
-</table>
+{% endblock %}
